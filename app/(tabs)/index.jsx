@@ -15,7 +15,7 @@ import { ModalPresentador } from '../../components/modalPresentador.jsx';
 
 
 //COLOCA TU API KEY DE D-ID AQUI
-const TOKEN = 'Basic WjJWaWIycHBPVFl5TlVCdGIzSjRhVzR1WTI5dDpPeFdrcTJINUpaeW9XYmluaGgyeTI='
+const TOKEN = 'Basic your:token'
 
 export default function App() {
   const [image, setImage] = useState(null);
