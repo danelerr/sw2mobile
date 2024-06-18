@@ -1,7 +1,18 @@
 {
   "expo": {
+    "plugins": [
+      "expo-build-properties",
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Necesita permisos para seleccionar el presentador"
+        }
+      ]
+    ],
     "name": "flamingo-app-test",
     "slug": "flamingo-app-test",
+    "scheme": "flamingo-app-test",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,19 +20,40 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "usesCleartextTraffic": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_IMAGES"
+      ],
+      "useNextNetworkSecurityConfig": true,
+      "config": {
+        "cleartext": {
+          "matches": [
+            "http://177.222.103.79:5000/*"
+          ]
+        }
+      },
+      "package": "com.daniel.cueto.flamingo.api"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6a6d8ee6-4071-4204-9581-39782e473340"
+      }
+    },
+    "owner": "danelerr"
   }
 }
